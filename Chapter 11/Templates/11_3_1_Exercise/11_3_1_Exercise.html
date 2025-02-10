@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <style>
+          #fox {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+            cursor: pointer;
+          }
+        </style>
+    </head>
+    <body>
+        <style>
+            body {
+              background-image: url('Forest.jpeg');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: 100% 100%;
+            }
+        </style>
+        <img id="fox" src="Fox.png">
+        <script>    
+        document.getElementById("fox").addEventListener("click", run);
+        function run()
+        {
+            let start = Date.now(); // remember start time
+            let timer = setInterval(function() {
+                // how much time passed from the start?
+                let timePassed = Date.now() - start;
+                // draw the animation at the moment timePassed
+                fox.style.left = timePassed / 5 + 'px';
+
+                if (timePassed > 2000) {
+                    clearInterval(timer); // finish the animation after 2 seconds
+                }
+            }, 20); //the function is executed every 20 milliseconds (=50 times per second)
+        }
+        </script>
+    </body>
+</html>
+    
+    
+    

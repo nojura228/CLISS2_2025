@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Arrays</h2>
+<p>The best way to loop through an array is using a standard for loop:</p>
+<p id="demo"></p>
+<select name="cars" id="cars" multiple>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="opel">Opel</option>
+    <option value="audi">Audi</option>
+</select>
+<br>
+<br>
+<input type="button" id="selectButton" value="Confirm Selection">
+<script>
+document.getElementById("selectButton").addEventListener("click", confirmSelection);
+function confirmSelection()
+{
+    //**********HTMLSelectElement********************************
+    let selectBoxCars=document.getElementById("cars");
+    let isMultiple= selectBoxCars.multiple;
+    //returns the value property of the selected option element
+    let firstOptionValue=selectBoxCars.value;
+    //**********HTMLOptionElement********************************
+    const text = selectBoxCars.options[1].text;
+    const value = selectBoxCars.options[1].value;
+    let selectedOption = selectBoxCars.options[selectBox.selectedIndex];
+    const selectedText = selectedOption.text;
+    const selectedValue = selectedOption.value;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Arrays</h2>
+<p>The best way to loop through an array is using a standard for loop:</p>
+<p id="demo"></p>
+<select name="cars" id="cars" multiple>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="opel">Opel</option>
+    <option value="audi">Audi</option>
+</select>
+<br>
+<br>
+<input type="button" id="selectButton" value="Confirm Selection">
+<script>
+const countries=["Luxembourg","Germany","Belgium","France"];
+let cLength = countries.length;
+let text = "<ul>";
+for (let i = 0; i < cLength; i++) {
+  text =text+ "<li>" + countries[i] + "</li>";
+}
+text =text+ "</ul>";
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
